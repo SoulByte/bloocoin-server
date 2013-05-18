@@ -18,6 +18,8 @@ class Command(object):
             self.error("Unable to decode request JSON")
             self._handle = False
             return
+        except KeyError:
+            pass
         missing = []
         for k in self.required:
             if k in self.data:
