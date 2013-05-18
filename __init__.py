@@ -65,9 +65,6 @@ def handle(obj, conn):  # Function for parsing commands, {'cmd':command}
                 "request": data
             }
         }))
-    except Exception as e:
-        # If data is not in the json format it will log the error.
-        print e
-
+        
 if __name__ == "__main__":
     main()
